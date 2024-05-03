@@ -1,22 +1,21 @@
-import { useState } from "react";
-import ButtonEditor from "./components/ButtonEditor";
-import ButtonPreview from "./components/ButtonPreview";
+import ContextMenu from "./components/ContextMenu";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../src/index.css";
+import KeyboardEventHandler from "./components/KeyboardEventHandler";
+import ButtonEditor from "./components/ButtonComponent/ButtonEditor";
+import TextEditor from "./components/TextEditor/TextEditor";
 
 function App() {
-  const [buttonStyle, setButtonStyle] = useState({
-    backgroundColor: "#1A1A1A",
-    color: "white",
-    fontSize: "16px",
-    padding: "10px",
-    borderRadius: "5px",
-  });
-
-  return (
-    <div className="App">
-      <ButtonEditor onUpdate={setButtonStyle} />
-      <ButtonPreview style={buttonStyle} />
-    </div>
-  );
+	return (
+		<>
+			<KeyboardEventHandler />
+			<ContextMenu />
+			<div className="container mt-3">
+				<ButtonEditor />
+				<TextEditor />
+			</div>
+		</>
+	);
 }
 
 export default App;
