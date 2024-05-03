@@ -7,17 +7,17 @@ import TextEditor from "./components/TextEditor/TextEditor";
 import ImageEditor from "./components/ImageEditor.jsx/ImageEditor";
 
 function App() {
-	return (
-		<>
-			<KeyboardEventHandler />
-			<ContextMenu />
-			<div className="container mt-3">
-				<ButtonEditor />
-				<TextEditor />
-				<ImageEditor />
-			</div>
-		</>
-	);
+  return (
+    <>
+      <KeyboardEventHandler />
+      <ContextMenu />
+      <div className="container mt-3">
+        <ButtonEditor />
+        <TextEditor />
+        <ImageEditor />
+      </div>
+    </>
+  );
 }
 
 export default App;
