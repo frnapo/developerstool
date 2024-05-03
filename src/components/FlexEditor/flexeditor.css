@@ -1,0 +1,43 @@
+#box-flex {
+	min-width: 250px;
+	min-height: 250px;
+	background: linear-gradient(to top, #13de00, #fc00ff);
+	border-radius: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+#aurora {
+	min-width: 200px;
+	min-height: 200px;
+	background-color: rgba(255, 255, 255, 0.386);
+	filter: blur(3rem);
+	border-radius: 50%;
+	transition: all 0.3s ease-in-out;
+}
+#aurora:hover {
+	transform: scale(2);
+	filter: blur(1rem);
+	transition: all 0.3s ease-in-out;
+}
+
+#buttons-flex {
+	min-width: 250px;
+	min-height: 250px;
+	max-width: 400px;
+	border: 5px dashed #ffffff;
+	padding: 1rem;
+	border-radius: 2rem;
+	background-color: #2d2d2d;
+}
+
+#flex-container {
+	min-height: 900px;
+}
+#snippet-flex {
+	min-width: 250px;
+	min-height: 250px;
+	border-radius: 2rem;
+	background-color: #2d2d2d;
+}
