@@ -1,8 +1,9 @@
 import { Col, Row } from "react-bootstrap";
+import EditMenu from "./EditMenu";
 
 /* eslint-disable react/prop-types */
 // label
-function StyleEditor({ style, onUpdate, elementType = "button" }) {
+function StyleEditor({ style, onUpdate, elementType = "button", onReset }) {
   function handleChange(e) {
     const { name, value, type } = e.target;
     const finalValue = type === "range" && name !== "fontWeight" ? value + "px" : value;
@@ -30,8 +31,8 @@ function StyleEditor({ style, onUpdate, elementType = "button" }) {
   };
 
   return (
-    <div>
-      {/* <h3 className="text-center">{label}</h3> */}
+    <div className="position-relative">
+      <EditMenu onReset={onReset} />
       <Row className="d-flex align-items-center">
         <Col xs={12} md={6} className="text-center overflow-hidden">
           {renderElement()}

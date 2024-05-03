@@ -128,6 +128,72 @@ pre.language-css {
   border-radius: 8px;
 }
 
+/*  EDIT MENU  */
+
+.edit-menu-wrapper {
+  width: 50px;
+  height: 50px;
+  margin-inline-start: auto !important;
+}
+
+.edit-menu {
+  user-select: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: #929292;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: transparent;
+  z-index: 100;
+  right: 0;
+}
+
+.edit-menu:hover {
+  background-color: #2d2d2d;
+  color: rgb(195, 195, 195);
+}
+
+.edit-menu.active {
+  background-color: #2d2d2d;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.menu-content {
+  user-select: none;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #2d2d2d;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 99;
+  border-bottom-right-radius: 25px !important;
+  border-bottom-left-radius: 25px !important;
+}
+
+.menu-item {
+  font-size: 22px;
+  color: #929292;
+  background-color: transparent;
+  padding: 12px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-item:hover {
+  background-color: #242424;
+  color: rgb(195, 195, 195);
+}
+
 /*  INPUT RANGE */
 
 .range-slider {

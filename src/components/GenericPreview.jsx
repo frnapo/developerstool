@@ -7,7 +7,8 @@ import { faClipboard } from "@fortawesome/free-regular-svg-icons";
 import { Tooltip, OverlayTrigger } from "react-bootstrap";
 
 function formatCSS(cssText) {
-  return cssText.replace(/(^\s*)(\w+)(:)(\s*)([^;]+)/gm, (match, p0, p1, p2, p3, p4) => {
+  const kebabCaseText = cssText.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
+  return kebabCaseText.replace(/(^\s*)(\w+)(:)(\s*)([^;]+)/gm, (match, p0, p1, p2, p3, p4) => {
     return `${p0}<span class="token property">${p1}</span><span class="token punctuation">${p2}</span>${p3}<span class="token value">${p4}</span>`;
   });
 }
@@ -15,9 +16,11 @@ function formatCSS(cssText) {
 function GenericPreview({ classType, style }) {
   const [copySuccess, setCopySuccess] = useState(false);
   const rawCssText = Object.entries(style)
-    .map(([key, value]) => `    ${key}: ${value};`)
+    .map(([key, value]) => {
+      const kebabKey = key.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
+      return `    ${kebabKey}: ${value};`;
+    })
     .join("\n");
-
   const formattedCSS = formatCSS(rawCssText);
 
   useEffect(() => {
