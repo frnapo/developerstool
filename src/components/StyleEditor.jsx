@@ -1,10 +1,11 @@
 import { Col, Row } from "react-bootstrap";
 
 /* eslint-disable react/prop-types */
-function StyleEditor({ style, onUpdate, label, elementType = "button" }) {
+// label
+function StyleEditor({ style, onUpdate, elementType = "button" }) {
   function handleChange(e) {
     const { name, value, type } = e.target;
-    const finalValue = type === "range" ? value + "px" : value;
+    const finalValue = type === "range" && name !== "fontWeight" ? value + "px" : value;
     const updatedStyle = { ...style, [name]: finalValue };
     onUpdate(updatedStyle);
   }
@@ -40,6 +41,7 @@ function StyleEditor({ style, onUpdate, label, elementType = "button" }) {
             const value = style[key];
             const inputType = getInputType(key);
             const isPixelValue = typeof value === "string" && value.endsWith("px");
+            const isRangeValue = key === "fontWeight";
 
             return (
               <div
@@ -71,6 +73,20 @@ function StyleEditor({ style, onUpdate, label, elementType = "button" }) {
                       name={key}
                       min="0"
                       max={key === "fontSize" ? "72" : "100"}
+                      value={parseInt(value, 10)}
+                      onChange={(e) => handleChange({ ...e, target: { ...e.target, name: key, type: "range" } })}
+                    />
+                  </div>
+                )}
+                {isRangeValue && (
+                  <div>
+                    <input
+                      type="range"
+                      className="range-slider"
+                      name={key}
+                      min="200"
+                      max="900"
+                      step="100"
                       value={parseInt(value, 10)}
                       onChange={(e) => handleChange({ ...e, target: { ...e.target, name: key, type: "range" } })}
                     />

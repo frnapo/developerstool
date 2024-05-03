@@ -46,7 +46,7 @@ button:focus-visible {
   position: fixed;
   z-index: 1000;
   width: 150px;
-  background-color: #1a1a1a;
+  background-color: #121212;
   border-radius: 20px;
 }
 
@@ -70,7 +70,9 @@ button:focus-visible {
 pre.language-css {
   background-color: #2d2d2d;
   color: #56b6c2;
-  border-radius: 5px;
+  border-radius: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .token.selector {
@@ -81,6 +83,10 @@ pre.language-css {
 }
 .token.punctuation {
   color: #ffcc65;
+}
+
+.custom-rounded {
+  border-radius: 2.5rem;
 }
 
 .code-header {
@@ -108,14 +114,18 @@ pre.language-css {
   background-color: #00ca4e;
 }
 
-.copy-code {
+.copy-code,
+.how-to-use {
   cursor: pointer;
-  display: flex;
-  align-items: center;
   font-size: 16px;
+  color: #929292;
+  transition: all 0.2s ease-in-out;
 }
-.copy-code:hover {
-  text-decoration: underline;
+.copy-code:hover,
+.how-to-use:hover {
+  color: rgb(195, 195, 195);
+  background-color: #242424;
+  border-radius: 8px;
 }
 
 /*  INPUT RANGE */

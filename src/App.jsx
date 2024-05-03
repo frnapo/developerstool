@@ -6,16 +6,16 @@ import ButtonEditor from "./components/ButtonComponent/ButtonEditor";
 import TextEditor from "./components/TextEditor/TextEditor";
 
 function App() {
-	return (
-		<>
-			<KeyboardEventHandler />
-			<ContextMenu />
-			<div className="container mt-3">
-				<ButtonEditor />
-				<TextEditor />
-			</div>
-		</>
-	);
+  return (
+    <>
+      <KeyboardEventHandler />
+      <ContextMenu />
+      <div className="container mt-3">
+        <ButtonEditor />
+        <TextEditor />
+      </div>
+    </>
+  );
 }
 
 export default App;

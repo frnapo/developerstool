@@ -3,7 +3,7 @@ import { useEffect } from "react";
 function KeyboardEventHandler() {
   useEffect(() => {
     const handleKeyDown = (event) => {
-      if (event.keyCode === 123) {
+      if (event.keyCode === 13) {
         event.preventDefault();
       }
     };
