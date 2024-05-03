@@ -23,7 +23,8 @@
     "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "^18.2.0",
     "react-dropzone": "^14.2.3",
-    "react-rnd": "^10.4.10"
+    "react-rnd": "^10.4.10",
+    "sass": "^1.76.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

@@ -1,6 +1,6 @@
 import ContextMenu from "./components/ContextMenu";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../src/index.css";
+import "../src/index.scss";
 import KeyboardEventHandler from "./components/KeyboardEventHandler";
 import ButtonEditor from "./components/ButtonComponent/ButtonEditor";
 import TextEditor from "./components/TextEditor/TextEditor";

@@ -1,4 +1,7 @@
 /* GENERAL SETTINGS */
+$tooltip-bg: #121212 !important;
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color-scheme: light dark;
@@ -285,11 +288,6 @@ select option {
   cursor: pointer;
   background-color: #121212;
   border: none !important;
-}
-
-select option:hover {
-  color: white;
-  background-color: #242424 !important;
 }
 
 select option:checked {
