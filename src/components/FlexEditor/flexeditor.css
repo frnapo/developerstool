@@ -1,43 +1,73 @@
 #box-flex {
-	min-width: 250px;
-	min-height: 250px;
-	background: linear-gradient(to top, #13de00, #fc00ff);
-	border-radius: 2rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
+  min-width: 250px;
+  min-height: 250px;
+  background: linear-gradient(to top, #13de00, #fc00ff);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 #aurora {
-	min-width: 200px;
-	min-height: 200px;
-	background-color: rgba(255, 255, 255, 0.386);
-	filter: blur(3rem);
-	border-radius: 50%;
-	transition: all 0.3s ease-in-out;
+  min-width: 200px;
+  min-height: 200px;
+  background-color: rgba(255, 255, 255, 0.386);
+  filter: blur(3rem);
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
 }
 #aurora:hover {
-	transform: scale(2);
-	filter: blur(1rem);
-	transition: all 0.3s ease-in-out;
+  transform: scale(2);
+  filter: blur(1rem);
+  transition: all 0.3s ease-in-out;
 }
 
 #buttons-flex {
-	min-width: 250px;
-	min-height: 250px;
-	max-width: 400px;
-	border: 5px dashed #ffffff;
-	padding: 1rem;
-	border-radius: 2rem;
-	background-color: #2d2d2d;
+  min-width: 250px;
+  min-height: 250px;
+  max-width: 400px;
+  border: 3.5px dashed #ffffff;
+  padding: 1rem;
+  border-radius: 2rem;
+  background-color: #2d2d2d;
+}
+
+.flex-button {
+  padding: 6px;
+  border: none !important;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background-color: #242424 !important;
+  color: #c3c3c3;
+  cursor: pointer;
+}
+
+.flex-button:hover {
+  color: white;
+  background-color: #121212 !important;
 }
 
 #flex-container {
-	min-height: 900px;
+  min-height: 900px;
 }
 #snippet-flex {
-	min-width: 250px;
-	min-height: 250px;
-	border-radius: 2rem;
-	background-color: #2d2d2d;
+  min-width: 250px;
+  min-height: 250px;
+  border-radius: 2rem;
+  background-color: #2d2d2d;
+}
+
+.flex-drop {
+  padding: 6px;
+  border: none !important;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background-color: #121212;
+  color: white;
+  cursor: pointer;
+}
+
+.flex-drop:focus {
+  outline: none;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
 }
