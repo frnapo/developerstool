@@ -3,10 +3,11 @@ import EditMenu from "./EditMenu";
 
 /* eslint-disable react/prop-types */
 // label
-function StyleEditor({ style, onUpdate, elementType = "button", onReset }) {
+function StyleEditor({ style, onUpdate, elementType = "button", onReset, lightMode }) {
   function handleChange(e) {
     const { name, value, type } = e.target;
     const finalValue = type === "range" && name !== "fontWeight" ? value + "px" : value;
+
     const updatedStyle = { ...style, [name]: finalValue };
     onUpdate(updatedStyle);
   }
@@ -30,9 +31,15 @@ function StyleEditor({ style, onUpdate, elementType = "button", onReset }) {
     }
   };
 
+  const textClass = lightMode ? "text-dark" : "text-light";
+  const rangeClass = lightMode ? "range-slider-white" : "range-slider";
+  const inputClass = lightMode ? "text-input-white" : "";
+
   return (
     <div className="position-relative">
-      <EditMenu onReset={onReset} />
+      <div className="d-flex justify-content-end position-relative" style={{ height: "50px" }}>
+        <EditMenu onReset={onReset} />
+      </div>
       <Row className="d-flex align-items-center">
         <Col xs={12} md={6} className="text-center overflow-hidden">
           {renderElement()}
@@ -50,7 +57,7 @@ function StyleEditor({ style, onUpdate, elementType = "button", onReset }) {
                   inputType === "color"
                     ? "d-flex align-items-center justify-content-center justify-content-md-start"
                     : ""
-                } my-4`}
+                } ${textClass} my-4`}
                 key={key}
               >
                 <label>
@@ -59,9 +66,12 @@ function StyleEditor({ style, onUpdate, elementType = "button", onReset }) {
                     .charAt(0)
                     .toUpperCase() + key.slice(1).replace(/([A-Z])/g, " $1")}
                 </label>
+
                 <input
                   type={inputType}
-                  className={inputType === "text" ? "text-input" : inputType === "color" ? "color-input" : ""}
+                  className={
+                    inputType === "text" ? `text-input ${inputClass}` : inputType === "color" ? `color-input` : ""
+                  }
                   name={key}
                   value={value}
                   onChange={handleChange}
@@ -70,7 +80,7 @@ function StyleEditor({ style, onUpdate, elementType = "button", onReset }) {
                   <div>
                     <input
                       type="range"
-                      className="range-slider"
+                      className={`${rangeClass}`}
                       name={key}
                       min="0"
                       max={key === "fontSize" ? "72" : "100"}
@@ -83,7 +93,7 @@ function StyleEditor({ style, onUpdate, elementType = "button", onReset }) {
                   <div>
                     <input
                       type="range"
-                      className="range-slider"
+                      className={`${rangeClass}`}
                       name={key}
                       min="200"
                       max="900"

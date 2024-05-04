@@ -45,7 +45,7 @@ function GenericPreview({ classType, style }) {
   return (
     <div>
       <pre className="m-0 mb-1 language-css  p-3 pt-1">
-        <div className="code-header">
+        <div className="code-header ">
           <div>
             <span className="dot red"></span>
             <span className="dot yellow"></span>

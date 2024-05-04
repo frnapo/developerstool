@@ -47,6 +47,7 @@ const Headbar = () => {
         <OverlayTrigger placement="bottom" delay={{ show: 500, hide: 0 }} overlay={<Tooltip>Images resizer</Tooltip>}>
           <FontAwesomeIcon icon={faExpand} className="headbar-item rounded-3" />
         </OverlayTrigger>
+
         <OverlayTrigger placement="bottom" delay={{ show: 500, hide: 0 }} overlay={<Tooltip>Color picker</Tooltip>}>
           <FontAwesomeIcon icon={faEyeDropper} className="headbar-item rounded-3" />
         </OverlayTrigger>
