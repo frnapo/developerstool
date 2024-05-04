@@ -100,7 +100,7 @@ const ContainerProperties = ({ containerProperties, setContainerProperties, ligh
         </select>
       </div>
       <div className="my-4">
-        <div className="d-flex align-items-center">
+        <div className="">
           <label className="me-2">Border Radius</label>
           <input
             type="text"

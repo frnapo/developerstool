@@ -537,3 +537,24 @@ input:focus + .slider {
 input:checked + .slider:before {
   transform: translateX(26px);
 }
+
+@media (min-width: 768px) {
+  .list-item-code {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .margin-code-1 {
+    margin-top: 107px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .margin-code-2 {
+    margin-top: 107px;
+  }
+}

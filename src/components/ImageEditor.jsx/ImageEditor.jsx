@@ -23,10 +23,10 @@ const ImageEditor = () => {
         <ToggleSwitch isOn={lightMode} handleToggle={() => setLightMode(!lightMode)} />
       </div>
       <div className="row">
-        <div className="col">
+        <div className="col mb-5 mb-lg-0">
           <DropImage containerProperties={containerProperties} setContainerProperties={setContainerProperties} />
         </div>
-        <div className="col ms-2">
+        <div className="col text-center text-lg-start ms-2">
           <ContainerProperties
             containerProperties={containerProperties}
             setContainerProperties={setContainerProperties}
