@@ -27,14 +27,17 @@ const LayoutEditor = () => {
 			>
 				<div className="row rounded-4" style={{ backgroundColor: colors.backgroundColor }}>
 					<div className="col-12 col-lg-2 order-lg-2">
-						<div className="bg-white bg-opacity-50 rounded-4 me-2 mt-2">
+						<div
+							className="bg-opacity-50 rounded-4 me-2 mt-2"
+							style={{ backgroundColor: colors.primaryColor }}
+						>
 							<ColorPicker colors={colors} handleColorChange={handleColorChange} />
 						</div>
 					</div>
 					<div className="col-12 col-lg-10 order-lg-1">
 						{/* NAVBAR */}
 						<div className="rounded-1 w-100 p-2" style={{ backgroundColor: colors.primaryColor }}>
-							<div className="d-flex justify-content-start" style={{ color: colors.backgroundColor }}>
+							<div className="d-flex justify-content-start" style={{ color: colors.secondaryColor }}>
 								<p className="text-center m-0 fs-5 me-2">Link</p>
 								<p className="text-center m-0 fs-5 me-2">Link 1</p>
 								<p className="text-center m-0 fs-5 me-2">Link 2</p>
@@ -51,7 +54,12 @@ const LayoutEditor = () => {
 							</p>
 						</div>
 						{/* HERO */}
-						<div className="w-100 p-5 rounded-2" style={{ backgroundColor: colors.primaryColor }}>
+						<div
+							className="w-100 p-5 rounded-2"
+							style={{
+								background: `linear-gradient(to right, ${colors.primaryColor}, ${colors.secondaryColor})`,
+							}}
+						>
 							<h1 className="display-1 text-center" style={{ color: colors.secondaryColor }}>
 								Hero
 							</h1>
@@ -66,11 +74,10 @@ const LayoutEditor = () => {
 							</p>
 							{/* cards */}
 							<div className="row">
-								<div className="col-12 col-lg-4">
+								<div className="col-12 col-lg-6">
 									<div
 										className="card mb-3"
 										style={{
-											maxWidth: "18rem",
 											backgroundColor: colors.primaryColor,
 											color: colors.color,
 										}}
@@ -98,11 +105,10 @@ const LayoutEditor = () => {
 										</div>
 									</div>
 								</div>
-								<div className="col-12 col-lg-4">
+								<div className="col-12 col-lg-6">
 									<div
 										className="card mb-3"
 										style={{
-											maxWidth: "18rem",
 											backgroundColor: colors.secondaryColor,
 											color: colors.color,
 										}}
@@ -130,37 +136,16 @@ const LayoutEditor = () => {
 										</div>
 									</div>
 								</div>
-								<div className="col-12 col-lg-4">
+								<div className="col-12">
 									<div
-										className="card mb-3"
+										className="mb-3 rounded-2"
 										style={{
-											maxWidth: "18rem",
-											backgroundColor: colors.tertiaryColor,
+											background: `linear-gradient(to right, ${colors.tertiaryColor}, ${colors.secondaryColor})`,
 											color: colors.color,
+											width: "100%",
+											height: "20px",
 										}}
-									>
-										<div className="card-header">Header</div>
-										<div className="card-body">
-											<h5 className="card-title">Tertiary Card</h5>
-											<p className="card-text">
-												Some quick example text to build on the card title.
-											</p>
-											<div className="d-flex justify-content-between align-items-center">
-												<button
-													className="btn me-2"
-													style={{ backgroundColor: colors.primaryColor }}
-												>
-													Go somewhere
-												</button>
-												<button
-													className="btn"
-													style={{ backgroundColor: colors.secondaryColor }}
-												>
-													Go somewhere
-												</button>
-											</div>
-										</div>
-									</div>
+									></div>
 								</div>
 								<div className="col-12 col-md-6">
 									<p className="fs-5" style={{ color: colors.color }}>

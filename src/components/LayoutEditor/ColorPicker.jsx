@@ -2,47 +2,82 @@
 const ColorPicker = ({ colors, handleColorChange }) => {
 	return (
 		<div className="p-1">
-			<div className="d-flex align-items-center ">
-				<label>Text Color</label>
-				<input
-					type="color"
-					className="color-input"
-					value={colors.color}
-					onChange={handleColorChange("color")}
-				/>
+			<div className="d-flex flex-column">
+				<div className="d-flex align-items-center ">
+					<label>Text Color</label>
+					<input
+						type="color"
+						className="color-input"
+						value={colors.color}
+						onChange={handleColorChange("color")}
+					/>
+				</div>
+				<input type="text" className="text-input" value={colors.color} onChange={handleColorChange("color")} />
 			</div>
-			<div className="d-flex align-items-center">
-				<label>Background Color</label>
+			<div className="d-flex flex-column">
+				<div className="d-flex align-items-center">
+					<label>Background Color</label>
+					<input
+						type="color"
+						className="color-input border border-2 border-dark "
+						value={colors.backgroundColor}
+						onChange={handleColorChange("backgroundColor")}
+					/>
+				</div>
 				<input
-					type="color"
-					className="color-input border border-2 border-dark "
+					type="text"
+					className="text-input"
 					value={colors.backgroundColor}
 					onChange={handleColorChange("backgroundColor")}
 				/>
 			</div>
-			<div className="d-flex align-items-center">
-				<label>Primary Color</label>
+			<div className="d-flex flex-column">
+				<div className="d-flex align-items-center">
+					<label>Primary Color</label>
+					<input
+						type="color"
+						className="color-input"
+						value={colors.primaryColor}
+						onChange={handleColorChange("primaryColor")}
+					/>
+				</div>
 				<input
-					type="color"
-					className="color-input"
+					type="text"
+					className="text-input"
 					value={colors.primaryColor}
 					onChange={handleColorChange("primaryColor")}
 				/>
 			</div>
-			<div className="d-flex align-items-center">
-				<label>Secondary Color</label>
+			<div className="d-flex flex-column">
+				<div className="d-flex align-items-center">
+					<label>Secondary Color</label>
+					<input
+						type="color"
+						className="color-input"
+						value={colors.secondaryColor}
+						onChange={handleColorChange("secondaryColor")}
+					/>
+				</div>
 				<input
-					type="color"
-					className="color-input"
+					type="text"
+					className="text-input"
 					value={colors.secondaryColor}
 					onChange={handleColorChange("secondaryColor")}
 				/>
 			</div>
-			<div className="d-flex align-items-center">
-				<label>Tertiary Color</label>
+			<div className="d-flex flex-column">
+				<div className="d-flex align-items-center">
+					<label>Tertiary Color</label>
+					<input
+						type="color"
+						className="color-input"
+						value={colors.tertiaryColor}
+						onChange={handleColorChange("tertiaryColor")}
+					/>
+				</div>
 				<input
-					type="color"
-					className="color-input"
+					type="text"
+					className="text-input"
 					value={colors.tertiaryColor}
 					onChange={handleColorChange("tertiaryColor")}
 				/>
