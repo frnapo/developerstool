@@ -2,6 +2,7 @@ import { useState } from "react";
 import DropImage from "./DropImage";
 import ContainerProperties from "./ContainerProperties";
 import GenericPreview from "../GenericPreview";
+import ToggleSwitch from "../ToggleSwitch";
 
 const ImageEditor = () => {
   const [lightMode, setLightMode] = useState(false);
@@ -18,12 +19,9 @@ const ImageEditor = () => {
 
   return (
     <div className={`${lightMode ? "bg-light" : "bg-custom-dark"} custom-rounded p-3 position-relative my-4`}>
-      <button
-        className="btn btn-success position-absolute top-0 end-0 me-2 mt-2"
-        onClick={() => setLightMode(!lightMode)}
-      >
-        {lightMode ? "Dark Mode" : "Light Mode"}
-      </button>
+      <div className="text-end me-1">
+        <ToggleSwitch isOn={lightMode} handleToggle={() => setLightMode(!lightMode)} />
+      </div>
       <div className="row">
         <div className="col">
           <DropImage containerProperties={containerProperties} setContainerProperties={setContainerProperties} />
@@ -32,6 +30,7 @@ const ImageEditor = () => {
           <ContainerProperties
             containerProperties={containerProperties}
             setContainerProperties={setContainerProperties}
+            lightMode={lightMode}
           />
         </div>
         <div className="col-12">

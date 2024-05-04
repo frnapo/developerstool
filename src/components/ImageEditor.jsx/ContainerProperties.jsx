@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-const ContainerProperties = ({ containerProperties, setContainerProperties }) => {
+const ContainerProperties = ({ containerProperties, setContainerProperties, lightMode }) => {
   const boxShadowStyles = {
     none: "none",
     soft: "0px 4px 8px rgba(0, 0, 0, 0.3)",
@@ -8,22 +8,24 @@ const ContainerProperties = ({ containerProperties, setContainerProperties }) =>
   };
 
   const handleRangeChange = (e, property) => {
-    console.log("handlerangechange", e.target.value, property);
-    console.log("containerProperties", containerProperties);
     setContainerProperties({ ...containerProperties, [property]: `${e.target.value}px` });
   };
 
   const handleValueRange = (value) => {
-    console.log("handlevaluerange", value);
     return value.replace("px", "");
   };
 
+  const textClass = lightMode ? "text-dark" : "text-light";
+  const rangeClass = lightMode ? "range-slider-white" : "range-slider";
+  const inputClass = lightMode ? "text-input-white" : "";
+  const dropClass = lightMode ? "drop-input-white" : "";
+
   return (
-    <div>
-      <div className="my-4">
-        <label className="text-white">Container Width</label>
+    <div className={`${textClass}`}>
+      <div>
+        <label>Container Width</label>
         <select
-          className="drop-input mb-2"
+          className={`${dropClass} drop-input mb-2`}
           value={containerProperties.width}
           onChange={(e) => setContainerProperties({ ...containerProperties, width: e.target.value })}
         >
@@ -38,9 +40,9 @@ const ContainerProperties = ({ containerProperties, setContainerProperties }) =>
         </select>
       </div>
       <div className="my-4">
-        <label className="text-white">Container Height</label>
+        <label>Container Height</label>
         <select
-          className="drop-input mb-2"
+          className={`${dropClass} drop-input mb-2`}
           value={containerProperties.height}
           onChange={(e) => setContainerProperties({ ...containerProperties, height: e.target.value })}
         >
@@ -55,9 +57,9 @@ const ContainerProperties = ({ containerProperties, setContainerProperties }) =>
         </select>
       </div>
       <div className="my-4">
-        <label className="text-white">Background Size</label>
+        <label>Background Size</label>
         <select
-          className="drop-input mb-2"
+          className={`${dropClass} drop-input mb-2`}
           value={containerProperties.backgroundSize}
           onChange={(e) => {
             setContainerProperties({ ...containerProperties, backgroundSize: e.target.value });
@@ -71,9 +73,9 @@ const ContainerProperties = ({ containerProperties, setContainerProperties }) =>
         </select>
       </div>
       <div className="my-4">
-        <label className="text-white">Object Position</label>
+        <label>Object Position</label>
         <select
-          className="drop-input mb-2"
+          className={`${dropClass} drop-input mb-2`}
           value={containerProperties.objectPosition}
           onChange={(e) => setContainerProperties({ ...containerProperties, objectPosition: e.target.value })}
         >
@@ -85,9 +87,9 @@ const ContainerProperties = ({ containerProperties, setContainerProperties }) =>
         </select>
       </div>
       <div className="my-4">
-        <label className="text-white">Background Repeat</label>
+        <label>Background Repeat</label>
         <select
-          className="drop-input mb-2"
+          className={`${dropClass} drop-input mb-2`}
           value={containerProperties.backgroundRepeat}
           onChange={(e) => setContainerProperties({ ...containerProperties, backgroundRepeat: e.target.value })}
         >
@@ -99,10 +101,10 @@ const ContainerProperties = ({ containerProperties, setContainerProperties }) =>
       </div>
       <div className="my-4">
         <div className="d-flex align-items-center">
-          <label className="text-white me-2">Border Radius</label>
+          <label className="me-2">Border Radius</label>
           <input
             type="text"
-            className="text-input mb-2"
+            className={`${inputClass} text-input mb-2`}
             placeholder="Border Radius"
             min="0"
             max="400"
@@ -115,16 +117,16 @@ const ContainerProperties = ({ containerProperties, setContainerProperties }) =>
           type="range"
           min="0"
           max="400"
-          className="range-slider mb-2"
+          className={`${rangeClass} mb-2`}
           placeholder="Border Radius"
           value={handleValueRange(containerProperties.borderRadius)}
           onChange={(e) => handleRangeChange(e, "borderRadius")}
         />
       </div>
       <div className="my-4">
-        <label className="text-white">Shadow </label>
+        <label>Shadow </label>
         <select
-          className="text-input mb-2"
+          className={`${inputClass} text-input mb-2`}
           value={containerProperties.boxShadow}
           onChange={(e) => setContainerProperties({ ...containerProperties, boxShadow: e.target.value })}
         >
