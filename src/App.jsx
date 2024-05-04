@@ -9,30 +9,38 @@ import FlexEditor from "./components/FlexEditor/FlexEditor";
 import { Col, Row } from "react-bootstrap";
 import Sidebar from "./Siderbar";
 import Headbar from "./components/Headerbar";
+import ListAndInputContainer from "./components/ListAndInputAndAnchor/ListAndInputContainer";
+import InputEditor from "./components/ListAndInputAndAnchor/InputEditor";
+import TableEditor from "./components/TableEditor/TableEditor";
+import LayoutEditor from "./components/LayoutEditor/LayoutEditor";
 
 function App() {
-  return (
-    <>
-      <KeyboardEventHandler />
-      <div className="container mt-3">
-        <ContextMenu />
-        <Row>
-          <Col xs={12}>
-            <Headbar />
-          </Col>
-          <Col xs={12} md={2} lg={1}>
-            <Sidebar />
-          </Col>
-          <Col xs={12} md={10} lg={11} style={{ paddingTop: "95px" }}>
-            <ButtonEditor />
-            <TextEditor />
-            <ImageEditor />
-            <FlexEditor />
-          </Col>
-        </Row>
-      </div>
-    </>
-  );
+	return (
+		<>
+			<KeyboardEventHandler />
+			<div className="container mt-3">
+				<ContextMenu />
+				<Row>
+					<Col xs={12}>
+						<Headbar />
+					</Col>
+					<Col xs={12} md={2} lg={1}>
+						<Sidebar />
+					</Col>
+					<Col xs={12} md={10} lg={11} style={{ paddingTop: "95px" }}>
+						<ButtonEditor />
+						<TextEditor />
+						<ImageEditor />
+						<FlexEditor />
+						<ListAndInputContainer />
+						<InputEditor />
+						<TableEditor />
+						<LayoutEditor />
+					</Col>
+				</Row>
+			</div>
+		</>
+	);
 }
 
 export default App;
