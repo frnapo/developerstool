@@ -41,10 +41,10 @@ function StyleEditor({ style, onUpdate, elementType = "button", onReset, lightMo
         <EditMenu onReset={onReset} />
       </div>
       <Row className="d-flex align-items-center">
-        <Col xs={12} md={6} className="text-center overflow-hidden">
+        <Col xs={12} lg={6} className="my-4 mb-lg-0 text-center overflow-hidden">
           {renderElement()}
         </Col>
-        <Col xs={12} md={6} className="text-center text-md-start">
+        <Col xs={12} lg={6} className="text-center text-lg-start">
           {Object.keys(style).map((key) => {
             const value = style[key];
             const inputType = getInputType(key);
@@ -55,7 +55,7 @@ function StyleEditor({ style, onUpdate, elementType = "button", onReset, lightMo
               <div
                 className={`${
                   inputType === "color"
-                    ? "d-flex align-items-center justify-content-center justify-content-md-start"
+                    ? "d-flex align-items-center justify-content-center justify-content-lg-start"
                     : ""
                 } ${textClass} my-4`}
                 key={key}
