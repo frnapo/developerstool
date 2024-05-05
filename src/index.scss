@@ -365,6 +365,10 @@ select option:checked {
 		width: 100%;
 		background-color: #bfbfbf;
 		margin-top: 1rem;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		border-radius: 0 !important;
 	}
 }
 
