@@ -13,6 +13,7 @@ import ListAndInputContainer from "./components/ListAndInputAndAnchor/ListAndInp
 import InputEditor from "./components/ListAndInputAndAnchor/InputEditor";
 import TableEditor from "./components/TableEditor/TableEditor";
 import LayoutEditor from "./components/LayoutEditor/LayoutEditor";
+import JsHelper from "./components/Javascript/JsHelper";
 
 function App() {
 	return (
@@ -36,6 +37,7 @@ function App() {
 						<InputEditor />
 						<TableEditor />
 						<LayoutEditor />
+						<JsHelper />
 					</Col>
 				</Row>
 			</div>
