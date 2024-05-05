@@ -22,9 +22,9 @@ const Headbar = () => {
 			<div className="mx-auto">
 				<img src={Elementique} alt="elementique-logo" className="elementique-logo" width={200} />
 			</div>
-			<div className="headbar d-flex bg-custom-dark rounded-4 ">
+			<div className="headbar d-flex bg-custom-dark rounded-4 mt-3 mt-md-0 ">
 				<OverlayTrigger placement="bottom" delay={{ show: 500, hide: 0 }} overlay={<Tooltip>Cursor</Tooltip>}>
-					<FontAwesomeIcon icon={faArrowPointer} className="headbar-item rounded-3" />
+					<FontAwesomeIcon icon={faArrowPointer} className="headbar-item rounded-3 " />
 				</OverlayTrigger>
 				<OverlayTrigger
 					placement="bottom"
