@@ -24,10 +24,10 @@ function App() {
 					<Col xs={12}>
 						<Headbar />
 					</Col>
-					<Col xs={12} md={2} lg={1}>
+					<Col xs={12} md={2} lg={1} className="d-flex align-items-center sidebar-column sticky-top">
 						<Sidebar />
 					</Col>
-					<Col xs={12} md={10} lg={11} style={{ paddingTop: "95px" }}>
+					<Col xs={12} md={10} lg={11} style={{ paddingTop: "25px" }}>
 						<ButtonEditor />
 						<TextEditor />
 						<ImageEditor />
