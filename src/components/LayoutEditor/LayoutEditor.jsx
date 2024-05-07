@@ -17,7 +17,7 @@ const LayoutEditor = () => {
 	};
 
 	return (
-		<div className="bg-custom-dark rounded-5 my-3 p-3">
+		<div id="layout" className="bg-custom-dark rounded-5 my-3 p-3">
 			<div
 				className="rounded-4 p-4 mb-2"
 				style={{

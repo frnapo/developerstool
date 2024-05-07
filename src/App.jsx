@@ -31,12 +31,13 @@ function App() {
 					<Col xs={12} md={10} lg={11} style={{ paddingTop: "25px" }}>
 						<ButtonEditor />
 						<TextEditor />
-						<ImageEditor />
-						<FlexEditor />
 						<ListAndInputContainer />
 						<InputEditor />
-						<TableEditor />
+						<ImageEditor />
+						<FlexEditor />
+
 						<LayoutEditor />
+						<TableEditor />
 						<JsHelper />
 					</Col>
 				</Row>
