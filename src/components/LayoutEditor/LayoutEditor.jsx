@@ -26,15 +26,15 @@ const LayoutEditor = () => {
 				}}
 			>
 				<div className="row rounded-4" style={{ backgroundColor: colors.backgroundColor }}>
-					<div className="col-12 col-lg-2 order-lg-2">
+					<div className="col-12 col-lg-3 order-lg-2">
 						<div
-							className="bg-opacity-50 rounded-4 me-2 mt-2"
+							className="bg-opacity-50 rounded-4 me-2 mt-2 mb-3 mb-lg-0 p-3"
 							style={{ backgroundColor: colors.primaryColor }}
 						>
 							<ColorPicker colors={colors} handleColorChange={handleColorChange} />
 						</div>
 					</div>
-					<div className="col-12 col-lg-10 order-lg-1">
+					<div className="col-12 col-lg-9 order-lg-1">
 						{/* NAVBAR */}
 						<div className="rounded-1 w-100 p-2" style={{ backgroundColor: colors.primaryColor }}>
 							<div className="d-flex justify-content-start" style={{ color: colors.secondaryColor }}>
