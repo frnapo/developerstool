@@ -14,7 +14,7 @@ import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
 const Sidebar = () => {
 	return (
-		<div className="sidebar d-flex flex-lg-column bg-custom-dark rounded-4">
+		<div className="sidebar d-flex py-3 align-items-center flex-lg-column bg-custom-dark rounded-4 mt-4">
 			<a href="#button" rel="noreferrer">
 				<OverlayTrigger placement="right" delay={{ show: 500, hide: 0 }} overlay={<Tooltip>Buttons</Tooltip>}>
 					<FontAwesomeIcon icon={faPlay} className="sidebar-item rounded-3" />
